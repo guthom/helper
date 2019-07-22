@@ -212,7 +212,7 @@ namespace helper {
         Eigen::MatrixXd mat2(3,1);
         mat2 << lastTransforms[name].data()[0], lastTransforms[name].data()[1], lastTransforms[name].data()[2];
 
-        if ((mat1 - mat2).norm() < KALMAN_RESET_DISTANCE)
+        if ((mat1 - mat2).norm() < KALMAN_RESET_SQUARED_DISTANCE)
             return true;
         else
         {

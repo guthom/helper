@@ -22,7 +22,7 @@ namespace helper {
     class TransformationHandler {
 
     private:
-        const double KALMAN_RESET_DISTANCE = 0.005;
+        const double KALMAN_RESET_SQUARED_DISTANCE = 0.0025;
         const int KALMAN_RESET_INTERVALL = 0;
 
         void Init();
